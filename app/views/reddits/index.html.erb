@@ -1,0 +1,8 @@
+<h1>
+RedditLysis
+</h1>
+
+<%= form_for @link, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :url %>
+  <%= f.submit "Submit" %>
+<% end %>
