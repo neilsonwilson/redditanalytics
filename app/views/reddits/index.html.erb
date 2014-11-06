@@ -1,8 +1,28 @@
+<html>
+<head>
+	<title>RedditLysis</title>
+</head>
+
+
 <h1>
 RedditLysis
 </h1>
 
-<%= form_for @link, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.text_field :url %>
-  <%= f.submit "Submit" %>
-<% end %>
+<div id="site-content">
+    <form name="RedditSearch" method="post"><b>Reddit Lysis</b>
+
+        <input type="text" id="query" size="150" />
+        <input type="button" id="buttonsearch" value="Search" />
+    </form>
+
+    <div id="results"></div>
+</div>
+
+
+<body>
+<div id="results">
+	</div>
+</body>
+</html>
+
+
