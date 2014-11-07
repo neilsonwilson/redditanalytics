@@ -1,11 +1,11 @@
 class LinksController < ApplicationController
 
-	def index
-		 @link = Link.all
-	    render :partial => 'index'
-	end
+	# def index
+	# 	 @link = Link.all
+	    
+	# end
 
-	def create
+	def index
 		common = ['person', '1', '2', 'i','love']
 
 		@comments = []
@@ -22,7 +22,11 @@ class LinksController < ApplicationController
 	    		words[w[0]] = w[1].count unless common.include? w[0]
 	    	} 
 	    end
-		render json: words.to_json
+	    @sorted = words.sort_by {|_key, value| value}.reverse
+	    # render json: @sorted
+	    render :partial => 'index'
+	end
+	def create
 	end
 
 	def update

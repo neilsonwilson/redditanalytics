@@ -8,6 +8,11 @@
                     <th data-field="counter">Amount</th>
                 </tr>
             </thead>
+            <%@sorted.each_with_index do |w,c|%>
+            <tbody>
+              <%=w%>
+            </tbody>
+            <%end%>
           </table>
   </div>
 </div>
