@@ -19,12 +19,12 @@ var results = $('#results');
 $(document).ready( function(){
     $("#buttonsearch").click(function (e) {
         e.preventDefault();
-        redditLoad();
+        redditLoad($('#query').val());
     });
     $("#query").keypress(function (e) {
         if (e.which == 13) {
             e.preventDefault();
-            redditLoad();
+            redditLoad($('#query').val());
         }
     });
 });

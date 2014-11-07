@@ -7,7 +7,9 @@ class LinksController < ApplicationController
 
 	def index
 		common = ['person', '1', '2', 'i','love']
-
+		if params[:link] == nil
+			return render json: {:error=>'a'}
+		end
 		@comments = []
 		link = params[:link].to_s + ".json"
 		@response = HTTParty.get(URI.encode(link))
