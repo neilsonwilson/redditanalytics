@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
 root 'reddits#index'
-resources :reddits, :links
+get 'links/index' => 'links#index'
 get 'reddits/:id' => 'reddits#scrap'
+get 'links/:id' => 'links#create'
+
+
+resources :reddits, :links
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
