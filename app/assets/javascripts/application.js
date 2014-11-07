@@ -15,20 +15,27 @@
 //= require_tree .
 
 
-var results = $('#results')
-
-
-$("#buttonsearch").click(function () {
-    commentLoad();
-});
-
-$("#query").keypress(function (e) {
-    if (e.which == 13) {
+var results = $('#results');
+$(document).ready( function(){
+    $("#buttonsearch").click(function (e) {
         e.preventDefault();
-        commentLoad();
-    }
+        redditLoad();
+    });
+    $("#query").keypress(function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            redditLoad();
+        }
+    });
 });
 
+
+
+var redditLoad = function (url) {
+    $.get('/links/index?link=' + url ).done(function(data){
+        $('#results').html(data);
+    });
+};
 
 
 function commentLoad(){

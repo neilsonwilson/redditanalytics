@@ -11,13 +11,13 @@
 			<div id="site-content">
 				<div class="row">
 				  <div class="col-lg-6 center">
-				  <%= form_for @link do |f| %>
+				  <form >
 				  <div class="input-group">
-				  <%= f.text_field :link , :class => 'form-control' %>
+				  	<input id="query" class='form-control'>
      				 <span class="input-group-btn">
-        				<%= f.submit 'Search', :class => "btn btn-info"  %>
+        				<button id="buttonsearch" class='btn btn-info'>Search</button>
       				</span>
-      				<% end %>
+      				</form>
       				</div>
 				  </div><!-- /.col-lg-6 -->
 				</div><!-- /.row -->

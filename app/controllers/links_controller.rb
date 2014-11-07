@@ -5,7 +5,7 @@ class LinksController < ApplicationController
 	    render :partial => 'index'
 	end
 
-	def create
+	def show
 		common = ['person', '1', '2', 'i','love']
 
 		@comments = []
