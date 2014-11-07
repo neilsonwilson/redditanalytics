@@ -11,14 +11,14 @@
 			<div id="site-content">
 				<div class="row">
 				  <div class="col-lg-6 center">
-				    <div class="input-group" name="RedditSearch">
-				      <input type="text" id="query" class="form-control">
-				      	<span class="input-group-btn">
-				        	<button class="btn btn-info" type="button">
-				        		<span class="glyphicon glyphicon-search"></span> Search
-				        	</button>
-				      	</span>      
-				    </div><!-- /input-group -->
+				  <%= form_for @link do |f| %>
+				  <div class="input-group">
+				  <%= f.text_field :url , :class => 'form-control' %>
+     				 <span class="input-group-btn">
+        				<%= f.submit 'Search', :class => "btn btn-info"  %>
+      				</span>
+      				<% end %>
+      				</div>
 				  </div><!-- /.col-lg-6 -->
 				</div><!-- /.row -->
 			</div>

@@ -25,7 +25,7 @@ class LinksController < ApplicationController
 
  private
     def task_params
-      params.require(:link).permit(:link_id, :comments)
+      params.require(:link).permit(:url, :issubreddit, :keyword, :created_at, :updated_at)
  end
 
 end
